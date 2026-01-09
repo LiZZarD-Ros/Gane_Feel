@@ -11,13 +11,17 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D _rigidBody;
 
+    private Gun _gun;
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    public void Init(Vector2 bulletSpawnPos, Vector2 mousePos)
+    public void Init(Gun gun, Vector2 bulletSpawnPos, Vector2 mousePos)
     {
+        _gun = gun;
+        transform.position = bulletSpawnPos;
         _fireDirection = (mousePos - bulletSpawnPos).normalized; 
     }
 
@@ -29,6 +33,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         Health health = other.gameObject.GetComponent<Health>();
         health?.TakeDamage(_damageAmount);
-        Destroy(this.gameObject);
+        _gun.ReleaseBulletFromPool(this);
     }
 }
