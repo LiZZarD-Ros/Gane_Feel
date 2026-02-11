@@ -19,6 +19,8 @@ MonoBehaviour:
   Splat:
   - {fileID: 11400000, guid: 7eff8174f4f08c8469167204b5527d17, type: 2}
   - {fileID: 11400000, guid: 6ad9e48dc5b51754893fa016c95e4295, type: 2}
+  Jetpack:
+  - {fileID: 11400000, guid: e6589e25a834d474e924cdf72bb033f7, type: 2}
   FightMusic:
   - {fileID: 11400000, guid: c71015817976ede48b6987ef2dd9713f, type: 2}
   DiscoParty:
