@@ -21,6 +21,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ad9e48dc5b51754893fa016c95e4295, type: 2}
   Jetpack:
   - {fileID: 11400000, guid: e6589e25a834d474e924cdf72bb033f7, type: 2}
+  GrenadeShoot:
+  - {fileID: 11400000, guid: 2fcebdcc91cca524890c7f6122adb0fd, type: 2}
+  GrenadeExplode:
+  - {fileID: 11400000, guid: f8d5ee39860938248a119b4c9971c1f5, type: 2}
+  GrenadeBeep:
+  - {fileID: 11400000, guid: 1a291780a2e9e0a47bef7e1a4e0fd3f1, type: 2}
   FightMusic:
   - {fileID: 11400000, guid: c71015817976ede48b6987ef2dd9713f, type: 2}
   DiscoParty:
