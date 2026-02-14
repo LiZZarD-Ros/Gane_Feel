@@ -27,6 +27,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8d5ee39860938248a119b4c9971c1f5, type: 2}
   GrenadeBeep:
   - {fileID: 11400000, guid: 1a291780a2e9e0a47bef7e1a4e0fd3f1, type: 2}
+  PlayerHit:
+  - {fileID: 11400000, guid: c57a5f6d69a1dff40b8b56faabf131dc, type: 2}
   FightMusic:
   - {fileID: 11400000, guid: c71015817976ede48b6987ef2dd9713f, type: 2}
   DiscoParty:

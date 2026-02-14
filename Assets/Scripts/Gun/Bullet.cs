@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
         iHitable?.TakeHit();
 
         IDamageable iDamage = other.gameObject.GetComponent<IDamageable>();
-        iDamage?.TakeDamage(_damageAmount, _knockBackThrust);
+        iDamage?.TakeDamage(_fireDirection, _damageAmount, _knockBackThrust);
 
         Instantiate(_bulletVFX, transform.position, transform.rotation);
     

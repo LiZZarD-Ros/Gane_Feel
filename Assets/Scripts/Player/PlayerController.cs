@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _coyoteTime = .5f;
     [SerializeField] private float _jetpackTime = .6f;
     [SerializeField] private float _jetpackStrength = 11f;
+    [SerializeField] private float _maxFallSpeedVelocity = -20f;
 
     private float _timeInAir, _coyoteTimer;
     private bool _doubleJumpAvailable;
@@ -64,7 +65,11 @@ public class PlayerController : MonoBehaviour
         Jetpack();
     }
 
- 
+    private void OnDestroy()
+    {
+        Fade fade = FindFirstObjectByType<Fade>();
+        fade?.FadeInAndOut();
+    }
 
     private void FixedUpdate()
     {
@@ -99,6 +104,10 @@ public class PlayerController : MonoBehaviour
         if (_timeInAir > _gravityDelay)
         {
             _rigidBody.AddForce(new Vector2 (0f, -_extraGravity * Time.deltaTime));
+            if (_rigidBody.velocity.y < _maxFallSpeedVelocity)
+            {
+                _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, _maxFallSpeedVelocity);
+            }
         }
     }
 
