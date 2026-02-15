@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MegaKill
   m_EditorClassIdentifier: 
   AudioType: 0
-  Clip: {fileID: 0}
+  Clip: {fileID: 8300000, guid: 6e779b75dd4bcb84e9171682871a4bb5, type: 3}
   Loop: 0
   RandomizePitch: 0
   RandomPitchRangeModifier: 0.1
